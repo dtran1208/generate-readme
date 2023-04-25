@@ -107,10 +107,7 @@ inquirer
         },
     ])
     .then((answers) => {
-        // Generate the README content using the provided answers
         const readmeContent = generateReadme(answers);
-
-        // Write the README content to a file
         fs.writeFile("README.md", readmeContent)
           .then(() => {
               console.log("README.md file generated successfully!");
